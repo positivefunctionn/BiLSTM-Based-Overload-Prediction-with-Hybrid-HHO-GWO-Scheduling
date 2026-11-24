@@ -1,0 +1,42 @@
+{
+  "simulation_type": "lightweight Python discrete-event execution simulation; not CloudSim Plus",
+  "input_file": "C:\\Users\\KEERTHANA\\Downloads\\Cloud_Scheduling_COMPLETE_ENHANCED_FINAL\\Final_Project\\HHO_GWO_Fixed_Release\\results\\live_inference\\person1_live_predictions.csv",
+  "forecast_mode": "bilstm",
+  "input_validation": {
+    "row_count": 1084,
+    "errors": [],
+    "valid": true,
+    "schema": "person1_bilstm_handoff",
+    "forecast_mode": "bilstm",
+    "risk_score_source": "binary predicted_overload fallback (not a calibrated probability)",
+    "input_columns": [
+      "actual_cpu",
+      "actual_overload",
+      "bilstm_predicted_cpu",
+      "bilstm_predicted_overload",
+      "persistence_predicted_cpu",
+      "persistence_predicted_overload",
+      "timestamp_ms"
+    ],
+    "overload_threshold": 80.0,
+    "note": "timestamp_ms values are preserved as supplied; the original column name and values are not rewritten."
+  },
+  "seed": 11,
+  "horizons_simulated": 109,
+  "tasks_simulated": 1084,
+  "vm_count": 4,
+  "evaluation_budget_per_horizon": 300,
+  "outputs": [
+    "task_execution.csv",
+    "vm_metrics.csv",
+    "horizon_metrics.csv",
+    "prediction_repair_log.csv"
+  ],
+  "interpretation": [
+    "The optimizer chooses assignments using predicted demand only.",
+    "Actual CPU is used only for post-hoc realized metrics and execution-duration simulation.",
+    "Execution times are simulation units, not measured wall-clock times.",
+    "Energy is the project's configured proxy, not measured physical energy.",
+    "This does not instantiate CloudSim Plus hosts, VMs, or Cloudlets."
+  ]
+}
