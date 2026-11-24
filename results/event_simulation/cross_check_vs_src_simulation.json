@@ -1,0 +1,9 @@
+{
+  "comparable": false,
+  "compared_tasks": 0,
+  "max_abs_difference_sim_units": null,
+  "reference": "results\\simulation\\task_execution.csv",
+  "stagger_interval": 1.0,
+  "agrees": null,
+  "reason": "Not comparable: the two simulations contain different task/horizon sets. The event simulation uses results/schedule_results.csv, while the reference uses results/simulation/task_execution.csv."
+}
